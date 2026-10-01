@@ -1,0 +1,5 @@
+name,asset_type,criticality,owner
+Customer Database,Database,9,IT Team
+Web Server,Server,8,DevOps Team
+Payment System,Application,10,Finance Team
+Employee Laptop,Endpoint,5,HR Team

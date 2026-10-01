@@ -1,0 +1,5 @@
+name,cvss_score,likelihood,asset_name
+SQL Injection,9.8,0.6,Customer Database
+Cross-Site Scripting,7.5,0.5,Web Server
+Weak Password Policy,5.5,0.4,Employee Laptop
+Outdated Software,8.2,0.7,Payment System

@@ -1,0 +1,5 @@
+threat,likelihood,impact
+Data Breach,0.6,9
+Ransomware,0.5,8
+Phishing,0.7,6
+DDoS Attack,0.4,7

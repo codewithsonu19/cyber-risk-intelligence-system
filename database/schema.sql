@@ -1,0 +1,61 @@
+PRAGMA foreign_keys = ON;
+
+CREATE TABLE IF NOT EXISTS assets (
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+name TEXT NOT NULL,
+asset_type TEXT NOT NULL,
+criticality INTEGER NOT NULL,
+business_value REAL NOT NULL DEFAULT 0,
+owner TEXT,
+location TEXT,
+created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS vulnerabilities (
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+asset_id INTEGER NOT NULL,
+name TEXT NOT NULL,
+description TEXT,
+severity REAL NOT NULL,
+exploitability REAL NOT NULL,
+likelihood REAL NOT NULL,
+status TEXT DEFAULT 'Open',
+created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+
+```
+FOREIGN KEY (asset_id)
+    REFERENCES assets(id)
+    ON DELETE CASCADE
+```
+
+);
+
+CREATE TABLE IF NOT EXISTS risks (
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+asset_id INTEGER NOT NULL,
+vulnerability_id INTEGER,
+likelihood REAL NOT NULL,
+impact REAL NOT NULL,
+risk_score REAL NOT NULL,
+risk_level TEXT NOT NULL,
+created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+
+```
+FOREIGN KEY (asset_id)
+    REFERENCES assets(id),
+
+FOREIGN KEY (vulnerability_id)
+    REFERENCES vulnerabilities(id)
+```
+
+);
+
+CREATE TABLE IF NOT EXISTS investments (
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+name TEXT NOT NULL,
+category TEXT,
+cost REAL NOT NULL,
+risk_reduction REAL NOT NULL,
+roi REAL DEFAULT 0,
+created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

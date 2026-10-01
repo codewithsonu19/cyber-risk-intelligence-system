@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+.stMetric {
+    border-radius: 10px;
+    padding: 10px;
+}
+
+div[data-testid="stMetricValue"] {
+    font-size: 28px;
+    font-weight: bold;
+}
+.stApp {
+    background-color: lightblue;
+}
+.stApp {
+    background-color: lightblue;
+}
+.stApp {
+    background: lightblue !important;
+}

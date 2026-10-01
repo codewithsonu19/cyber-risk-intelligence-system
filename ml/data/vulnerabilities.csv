@@ -1,0 +1,11 @@
+id,name,description,severity,cvss_score,likelihood
+1,SQL Injection,Unauthorized database access vulnerability,Critical,9.8,0.9
+2,Cross Site Scripting,Malicious script injection vulnerability,High,8.2,0.7
+3,Weak Password,Weak authentication credentials,Medium,6.5,0.6
+4,Outdated Software,Software contains known security vulnerabilities,High,8.8,0.8
+5,Missing MFA,Account lacks multi factor authentication,High,7.5,0.7
+6,Open Port,Unnecessary network port exposed,Medium,5.3,0.5
+7,Insecure API,API endpoint lacks proper security controls,High,8.6,0.7
+8,Data Exposure,Sensitive information may be exposed,Critical,9.1,0.8
+9,Phishing Risk,Users may be targeted by phishing attacks,High,7.8,0.6
+10,Unpatched System,System is missing important security patches,Critical,9.4,0.85
